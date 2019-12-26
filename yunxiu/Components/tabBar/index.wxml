@@ -1,0 +1,28 @@
+<!-- <view class='tab-bar-space'></view> -->
+<!-- 
+    @Author:Training
+    @desc: 页面的tabBar
+    @warning:   注意  这里tabBar的参数不能配置在引用页面中 
+                请到此页面的js文件中配置对应参数
+    @params: 参数请查看.js文件中的注释信息
+ -->
+<view class="tab-bar">
+    <view class="tab-item-box" wx:for="{{userGroup == 0 ? list:engineerList}}" wx:key="item" >
+        <view class="tab-bar-item {{selected === index?'tab-bar-active':''}}" bindtap='switchTab' wx:if="{{item.main == false}}" data-path="{{item.pagePath}}">
+            <view class="tab-bar-icon"><text class="iconfont {{item.icon}}"></text></view>
+            <view class="tab-bar-text"><text>{{item.text}}</text></view>
+        </view>
+        <view class="tab-bar-item" bindtap='scanCode' wx:if="{{item.main == true}}" >
+            <view class="tab-bar-icon tab-main">
+                <text class="iconfont icon-scancode"></text>
+            </view>
+            <view class="tab-main-bg"></view>
+            <view class="tab-bar-icon"><text decode>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+            
+            <view class="tab-bar-text">
+                <text>{{item.text}}</text>
+            </view>
+        </view>
+    </view>
+ 
+</view>

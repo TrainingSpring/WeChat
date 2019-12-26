@@ -1,0 +1,8 @@
+/* Components/table/td/index.wxss */
+.t-td {
+    display: flex;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    padding: 20rpx;
+    font-size: 24rpx;
+}

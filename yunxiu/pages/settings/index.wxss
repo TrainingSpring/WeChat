@@ -1,0 +1,10 @@
+/* pages/settings/index.wxss */
+.settings-exit{
+ 
+    padding:40rpx 0;
+    font-size: 26rpx;
+    color:#3398ff;
+    text-align: center;
+    background: #fff;
+    margin-top: 1px;   
+}

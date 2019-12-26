@@ -1,0 +1,20 @@
+<!--pages/pay/index.wxml-->
+<view class="title">
+    请选择支付方式
+</view>
+<view class="payMode">
+    <!-- 支付模式 -->
+    <view class="mode">
+        <view class="icon">
+            <text class="iconfont icon-weixinzhifu"></text>
+        </view>
+        <view class="text">微信支付</view>
+        <view class="select">
+            <radio-group bindchange="selectPay">
+                <radio value="{{payMode}}" checked="{{true}}" color="#017eff"  />
+            </radio-group>
+        </view>
+    </view>
+    <!-- 确认支付按钮 -->
+    <view class="btn">微信支付{{rmb}}元</view>
+</view>

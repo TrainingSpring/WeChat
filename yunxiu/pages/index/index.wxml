@@ -1,0 +1,27 @@
+<!--index.wxml 商品展示-->
+<space></space>
+<!-- 客户页面布局 -->
+<scroll-view class="commodityList" wx:if="{{userGroup == 0}}" bindscrolltolower="loadMore" scroll-y>
+    <view class="commodityItem" wx:for="{{commodity}}"  data-path="{{item.path}}" bindtap='toInfo'>
+        <view class="left">
+            <image src="{{item.img}}" />
+        </view>
+        <view class="right"><text >{{item.title}}</text></view>
+    </view>
+    <i-load-more tip="加载更多" /> 
+    <i-load-more loading="{{false}}" tip="没有数据啦" /> 
+</scroll-view>
+<!-- 技术员页面布局 -->
+<view class="engineer commBox" wx:else>
+    <view class="engineerItem" wx:for="{{engineerList}}" data-id="{{item.number}}" wx:key="item" bindtap='goDetail'>
+        <listItem key="订单编号" value="{{item.number}}"></listItem>
+        <listItem key="客户名称" value="{{item.name}}"></listItem>
+        <listItem key="故障设备" value="{{item.sendDate}}"></listItem>
+        <listItem key="待接订单" valueColor="#f53532" value="{{item.orderNum}}"></listItem>
+    </view>
+    <i-load-more tip="加载更多" /> 
+    <i-load-more loading="{{false}}" tip="没有数据啦" /> 
+    <view class="zw"></view>
+</view>
+<!-- tabBar 通用  如需修改参数 请到组件内部修改对应data值 -->
+<tabBar selected='0' />

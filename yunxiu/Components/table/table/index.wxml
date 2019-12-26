@@ -1,0 +1,10 @@
+<!--Components/table/table/index.wxml-->
+<!-- 
+    @Author:Training
+    @desc: 类似于html中的table标签
+    @warning: 注意  此标签一般和对应的目录下的tr  td一起使用  使用方法类似html
+    @prams:none
+ -->
+<view class="i-class t-table"  >
+    <slot></slot>
+</view>

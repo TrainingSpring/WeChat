@@ -1,0 +1,20 @@
+<!--Components/listItem/listItem-group/index.wxml-->
+<!-- 列表通用组件  外层 -->
+<!-- 
+    @params:
+        key : 头部标题 如: "订单编号"
+        value : 值  如: 34632165746
+        status : 状态
+-->
+<view class="listBox i-class">
+    <view class="list">
+        <view class="status">
+            <view class="left">{{key}}: {{value}}</view>
+            <view class="right">{{status}}</view>
+        </view>
+    <!-- 处理信息 dispose -->
+        <view class="disposeInfo">
+            <slot></slot>
+        </view>
+    </view>
+</view>

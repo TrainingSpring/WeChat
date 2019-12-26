@@ -1,0 +1,32 @@
+<!--engineerPages/searchPage/index.wxml-->
+<view class="search">
+    <view class="searchBox" bindtap="toSearch">
+         <input type="text" focus placeholder="请输入要搜索的内容" bindconfirm="search" confirm-type="search" />
+    </view>
+</view>
+<view class="allOrder commBox">
+    <view class="orderItem" 
+        wx:for="{{searchData}}" 
+        data-id="{{item.number}}" 
+        wx:key="item" 
+        bindtap='goDetail'
+        wx:if="{{state == item.status || state == -1}}"
+        >
+
+        <listItem key="订单编号" i-class="orderLi" value="{{item.number}}"></listItem>
+        <listItem key="客户名称" i-class="orderLi" value="{{item.name}}"></listItem>
+        <listItem key="故障报备" i-class="orderLi" value="{{item.sendDate}}"></listItem>
+        <listItem key="{{item.status == 0 ?'订单受理':item.status == 1?'处理结束':'完成评价'}}" i-class="orderLi" value="{{item.status == 0 ?item.acceptDate:item.status == 1?item.accepted:item.comment}}"></listItem>                
+        <listItem key="{{item.status == 0 ?'订单受理':'等待付款'}}" valueColor="#f53532"  wx:if="{{item.status != 2}}"  i-class="orderLi" value="{{item.status == 0 ?item.orderNum:'￥ '+item.RMB}}"></listItem>                
+        <listItem key="已付金额" wx:if="{{item.status == 2}}" i-class="orderLi" value="{{item.RMB}}"></listItem>
+            <i-rate
+            style="padding-left:20rpx;" 
+            wx:if="{{item.status == 2}}"
+            size="18"
+            bind:change="changeStar" 
+            value="{{item.starIndex}}"
+            disable>
+        
+        </i-rate>
+    </view>
+</view>

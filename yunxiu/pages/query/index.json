@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "steps": "/Components/steps/steps/index",
+    "step": "/Components/steps/step/index",
+    "space":"/Components/spaceRow/index"
+  },
+  "navigationBarTitleText": "进度查询"
+}

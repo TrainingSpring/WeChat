@@ -1,0 +1,38 @@
+/* engineerPages/searchPage/index.wxss */
+.search{
+    position: fixed;
+    top: 0;
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+    padding: 20rpx;
+    width: calc(100vw - 40rpx);
+    background: #f5f5f5;
+}
+.search .searchBox{
+    background: #fff;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 10rpx;
+    padding-left: 20rpx;
+}
+.searchBox input{
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rpx;
+}
+.commBox{
+    padding: 100rpx 0 0;
+    min-height: calc(100vh - 100rpx)
+}
+
+.allOrder .orderItem{
+    background: #fff;
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+    padding-bottom: 20rpx;
+}
+.allOrder .orderItem .orderLi{
+    padding: 15rpx 20rpx;
+}

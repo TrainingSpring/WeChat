@@ -1,0 +1,4 @@
+/* pages/search/index.wxss */
+.padding{
+    height: 45rpx;
+}

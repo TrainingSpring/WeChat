@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "listItem":"/Components/listItem/listItem/index",
+    "listItem-group":"/Components/listItem/listItem-group/index"
+  },
+  "navigationBarTitleText": "维修记录"
+}

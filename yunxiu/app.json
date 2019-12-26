@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "engineerPages/result/index",
+    "pages/index/index",
+    "engineerPages/getOrder/index",
+    "pages/repair/index",
+    "pages/my/index",
+    "engineerPages/allOrder/index",
+    "engineerPages/accepted/index",
+    "pages/evalute/index",
+    "pages/pay/index",
+    "pages/myOrder/index",
+    "pages/record/index",
+    "pages/settings/index",
+    "pages/safety/index",
+    "pages/myInfo/index",
+    "pages/myMsg/index",
+    "pages/query/index",
+    "pages/machineDetails/index",
+    "pages/downloadFile/index",
+    "pages/articleDetails/index",
+    "pages/logs/logs",
+    "pages/videoDetails/index",
+    "engineerPages/searchPage/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的主页"
+      },
+      {
+        "pagePath": "engineerPages/accepted/index",
+        "text": "已接订单"
+      },
+      {
+        "pagePath": "engineerPages/allOrder/index",
+        "text": "全部订单"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

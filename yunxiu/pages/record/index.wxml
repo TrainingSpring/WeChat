@@ -1,0 +1,10 @@
+<!--pages/record/index.wxml-->
+<!-- 维修记录 record -->
+<view class="commBox">
+    <listItem-group wx:for="{{disposeInfo}}" wx:key="item" i-class="record" key="订单编号" value="{{item.number}}" status="{{item.status}}">
+        <listItem key="报障时间" value="{{item.sendDate}}"></listItem>
+        <listItem key="维修时间" value="{{item.disposeDate}}"></listItem>
+        <listItem key="技术员" value="{{item.technician}}"></listItem>
+    </listItem-group>
+</view>
+

@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "i-tabs": "/dist/tabs/index",
+    "i-tab": "/dist/tab/index",
+    "t-list":"/Components/list/index",
+    "i-button": "/dist/button/index",
+    "t-tabs": "/Components/tabs/index",
+    "t-tab": "/Components/tab/index",
+    "t-table":"/Components/table/table/index",
+    "t-tr":"/Components/table/tr/index",
+    "t-td":"/Components/table/td/index"
+  },
+  "navigationBarTitleText": "订单详情"
+}

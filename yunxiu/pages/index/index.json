@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tabBar":"/Components/tabBar/index",
+    "i-load-more": "/dist/load-more/index",
+    "space":"/Components/spaceRow/index",
+    "listItem":"/Components/listItem/listItem/index"
+  },
+  "navigationBarTitleText": "首页"
+}

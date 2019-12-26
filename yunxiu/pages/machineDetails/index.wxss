@@ -1,0 +1,80 @@
+/* pages/machineDetails/inde.wxss */
+image{
+    width:100%;
+    height: 100%;
+}
+.machineDetails{
+    padding:20rpx;
+}
+.machineBox{
+    padding:0 25rpx;
+}
+.machineBox .machineImg{
+    width: 580rpx;
+    height: 245rpx;
+    margin: 0 auto;
+    padding: 35rpx 0;
+}
+.machineBox .detail-title{
+    margin-bottom: 40rpx;
+}
+.machineBox .details{
+    padding-top:30rpx;
+    border-top: 1px solid #ccc; 
+}
+.machineBox .details .detail-info{
+    margin-bottom: 40rpx;
+    font-size: 26rpx;
+    text-indent: 1em;
+}
+.machineBox .details .detail-info .key{
+    color:#333;
+}
+
+.machineBox .details .detail-info .value{
+    color:#676767;
+}
+.machineBox .otherInfo{
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40rpx;
+}
+.machineBox .dataSheet,.machineBox .server{
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.machineBox .dataSheet{
+    height: 114rpx;
+    justify-content: space-around;
+    color: #008cff;
+    font-size:24rpx;
+}
+.machineBox .dataSheet view{
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 114rpx;
+}
+.machineBox .dataSheet .left{
+    border-right: 1px solid #ccc;
+}
+.machineBox .server{
+    height: 90rpx;
+    color: #333;
+    font-size: 24rpx;
+}
+.machineBox .server:last-child{
+    border-bottom: none;
+}
+.machineBox .server .right{
+    color: #666;
+}
+.menu .iconfont{
+    color: #008cff;
+    font-size: 55rpx;
+}

@@ -1,0 +1,49 @@
+<!--engineerPages/accepted/index.wxml-->
+<view class="acceptBox commBox">
+    <!-- 顶部tab -->
+    <view class="tab">
+        <t-tabs i-class="detail-tabs" fixed current="{{ current }}" bindchange="changeHandle">
+            <t-tab key="accepted" border="{{current == 'accepted' ?'bottom':'none'}}" title="已接单"></t-tab>
+            <t-tab key="underway" border="{{current == 'underway' ?'bottom':'none'}}" title="进行中"></t-tab>
+            <t-tab key="waitPay"  border="{{current == 'waitPay' ?'bottom':'none'}}" title="待付款"></t-tab>
+            <t-tab key="finished" border="{{current == 'finished' ?'bottom':'none'}}" title="完成"></t-tab>
+        </t-tabs>
+    </view>
+    <view class="content">
+        <!-- 
+            status 
+            0  进行中
+            1  待付款
+            2  完成
+         -->
+        <!-- 全部已接受 -->
+        <view class="accept">
+            <view class="orderItem" 
+                wx:for="{{allOrder}}" 
+                data-id="{{item.number}}" 
+                wx:key="item" 
+                bindtap='goDetail'
+                wx:if="{{state == item.status || state == -1}}"
+                >
+
+                <listItem key="订单编号" i-class="orderLi" value="{{item.number}}"></listItem>
+                <listItem key="客户名称" i-class="orderLi" value="{{item.name}}"></listItem>
+                <listItem key="故障报备" i-class="orderLi" value="{{item.sendDate}}"></listItem>
+                <listItem key="{{item.status == 0 ?'订单受理':item.status == 1?'处理结束':'完成评价'}}" i-class="orderLi" value="{{item.status == 0 ?item.acceptDate:item.status == 1?item.accepted:item.comment}}"></listItem>                
+                <listItem key="{{item.status == 0 ?'订单受理':'等待付款'}}" valueColor="#f53532"  wx:if="{{item.status != 2}}"  i-class="orderLi" value="{{item.status == 0 ?item.orderNum:'￥ '+item.RMB}}"></listItem>                
+                <listItem key="已付金额" wx:if="{{item.status == 2}}" i-class="orderLi" value="{{item.RMB}}"></listItem>
+                 <i-rate
+                    style="padding-left:20rpx;" 
+                    wx:if="{{item.status == 2}}"
+                    size="18"
+                    bind:change="changeStar" 
+                    value="{{item.starIndex}}"
+                    disable>
+                
+                </i-rate>
+            </view>
+        </view>
+           
+    </view>
+</view>
+<tabBar selected='1' />

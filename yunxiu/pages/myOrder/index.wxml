@@ -1,0 +1,93 @@
+<!--pages/myOrder/index.wxml-->
+<!-- 
+    @description: 我的订单页面
+
+    evalute : 评价
+-->
+<view class="tabs">
+    <i-tabs current="{{ current }}" fixed bindchange="handleChange">
+        <i-tab key="all" title="全部"></i-tab>
+        <i-tab key="wait" title="待付款"></i-tab>
+        <i-tab key="evaluate" title="待评价"></i-tab>
+        <i-tab key="finished" title="已完成"></i-tab>
+    </i-tabs>
+</view>
+<view class="content">
+    <!-- 所有订单 -->
+    <view class="all" wx:if="{{current == 'all'}}">
+        <listItem-group wx:for="{{allOrder}}" wx:key="item" i-class="order" key="订单编号" value="{{item.number}}" status="{{item.status == 0?'进行中':item.status == 1?'交易成功':item.status == 2?'等待付款':'交易失败'}}">
+            <listItem key="报障时间" value="{{item.sendDate}}"></listItem>
+            <listItem key="设备编号" value="{{item.machineNum}}"></listItem>
+            <listItem key="故障描述" value="{{item.errorDesc}}"></listItem>
+            <listItem key="处理结果" wx:if="{{item.status != 0}}" value="{{item.result}}"></listItem>
+            <listItem key="付款金额" wx:if="{{item.status != 0}}" value="￥ {{item.payNum}}"></listItem>
+            <view class="handle" >
+                <view class="{{item.status == 0?'mainBtn':''}} btn">查看进度</view>
+                <view wx:if="{{item.status != 0 && item.status != -1}}" class="mainBtn btn">{{item.status == 2?"付款":"评价"}}</view>
+            </view>
+        </listItem-group>
+    </view>
+    <!-- 待付款 -->
+    <view class="wait" wx:elif="{{current == 'wait'}}">
+        <listItem-group 
+            wx:for="{{allOrder}}"
+            wx:key="item"
+            i-class="order" 
+            key="订单编号" 
+            value="{{item.number}}" 
+            wx:if="{{item.status == 2}}"
+            status="{{item.status == 0?'进行中':item.status == 1?'交易成功':item.status == 2?'等待付款':'交易失败'}}">
+            <listItem key="报障时间" value="{{item.sendDate}}"></listItem>
+            <listItem key="设备编号" value="{{item.machineNum}}"></listItem>
+            <listItem key="故障描述" value="{{item.errorDesc}}"></listItem>
+            <listItem key="处理结果" wx:if="{{item.status != 0}}" value="{{item.result}}"></listItem>
+            <listItem key="付款金额" wx:if="{{item.status != 0}}" value="￥ {{item.payNum}}"></listItem>
+            <view class="handle" >
+                <view class="{{item.status == 0?'mainBtn':''}} btn">查看进度</view>
+                <view wx:if="{{item.status != 0 && item.status != -1}}" class="mainBtn btn">{{item.status == 2?"付款":"评价"}}</view>
+            </view>
+        </listItem-group>
+    </view>
+    <!-- 待评价 -->
+    <view class="evaluate" wx:elif="{{current == 'evaluate'}}">
+        <listItem-group 
+            wx:for="{{allOrder}}"
+            wx:key="item"
+            i-class="order" 
+            key="订单编号" 
+            value="{{item.number}}" 
+            wx:if="{{item.status == 1 && item.evaluate == 0}}"
+            status="{{item.status == 0?'进行中':item.status == 1?'交易成功':item.status == 2?'等待付款':'交易失败'}}">
+            <listItem key="报障时间" value="{{item.sendDate}}"></listItem>
+            <listItem key="设备编号" value="{{item.machineNum}}"></listItem>
+            <listItem key="故障描述" value="{{item.errorDesc}}"></listItem>
+            <listItem key="处理结果" wx:if="{{item.status != 0}}" value="{{item.result}}"></listItem>
+            <listItem key="付款金额" wx:if="{{item.status != 0}}" value="￥ {{item.payNum}}"></listItem>
+            <view class="handle" >
+                <view class="{{item.status == 0?'mainBtn':''}} btn">查看进度</view>
+                <view wx:if="{{item.status != 0 && item.status != -1}}" class="mainBtn btn">{{item.status == 2?"付款":"评价"}}</view>
+            </view>
+        </listItem-group>
+    </view>
+    <!-- 已完成 -->
+    <view class="finished" wx:elif="{{current == 'finished'}}">
+        <listItem-group 
+            wx:for="{{allOrder}}"
+            wx:key="item"
+            i-class="order" 
+            key="订单编号" 
+            value="{{item.number}}" 
+            wx:if="{{item.status == 1 && item.evaluate == 1}}"
+            status="{{item.status == 0?'进行中':item.status == 1?'交易成功':item.status == 2?'等待付款':'交易失败'}}">
+            <listItem key="报障时间" value="{{item.sendDate}}"></listItem>
+            <listItem key="设备编号" value="{{item.machineNum}}"></listItem>
+            <listItem key="故障描述" value="{{item.errorDesc}}"></listItem>
+            <listItem key="处理结果" wx:if="{{item.status != 0}}" value="{{item.result}}"></listItem>
+            <listItem key="付款金额" wx:if="{{item.status != 0}}" value="￥ {{item.payNum}}"></listItem>
+            <view class="handle" >
+                <view class="{{item.status == 0?'mainBtn':''}} btn">查看进度</view>
+                <view wx:if="{{item.status != 0 && item.status != -1}}" class="mainBtn btn">{{item.status == 2?"付款":"评价"}}</view>
+            </view>
+        </listItem-group>
+    </view>
+</view>

@@ -1,0 +1,104 @@
+<!--pages/CountTime/index.wxml-->
+
+<view id="CountTime" style="background-color: {{bgColor}};">
+    <view class="view">
+        {{time}}
+    </view>
+    <view class="hr"></view>
+    <view class="setting">
+        <view class="item type">
+            <view class="key">计时方式 :</view>
+            <view class="value">
+                <radio-group class="radio-group" bindchange="radioChangeType">
+                <radio class="radio" value="0"  disabled="{{state === 1 || state === 2}}">
+                    <text>向下计时</text>
+                </radio>
+                <radio class="radio" disabled="{{state === 1 || state === 2}}" value="1"  checked="{{true}}">
+                    <text>向上计时</text>
+                </radio>
+            </radio-group>
+            </view>
+        </view>
+        
+        <view class="item" wx:if="{{settings.type === 0}}">
+            <view class="key">计时总数(秒) :</view>
+            <view class="value">
+                <input type="number" disabled="{{state === 1 || state === 2}}" placeholder="向上计数不填" bindinput="changeAmount" ></input>
+            </view>
+        </view>
+        
+        <view class="item interval" wx:if="{{settings.type !== 0}}">
+            <view class="key">提醒间隔(秒) :</view>
+            <view class="value">
+                <input type="number" placeholder="可以为空" value="{{settings.interval}}" disabled="{{state === 1 || state === 2}}" bindinput="changeInterval" ></input>
+            </view>
+        </view>
+        <view class="item audio">
+            <view class="key">提醒音乐 :</view>
+            <view class="value">
+                <scroll-view class="scroll" scroll-y>
+                  <radio-group class="radio-group" bindchange="radioChangeMusic">
+                    <radio class="radio" wx:for="{{audio}}" value="{{index}}" checked="{{item.isChecked}}">
+                        <text>{{item.name}}</text>
+                    </radio>
+                  </radio-group>
+                </scroll-view>
+                <view class="play">
+                    <text class="btn" bindtap="playMusic">{{isStop?"试听":"暂停"}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- <view class="item">
+            <view class="key">提醒暂停计时 :</view>
+            <view class="value">
+                <switch bindchange="isPauseCount" checked="{{settings.isPauseCount}}" />
+            </view>
+        </view> -->
+        <view class="item">
+          <view class="key">开启弱光:</view>
+          <view class="value">
+            <switch bindchange="setLight" checked="{{light}}" />
+          </view>
+        </view>
+    </view>
+    
+    <view class="bgColor">
+        <view class="key">更换颜色 :</view>
+        <view class="value">
+            <input value="{{bgColor}}" bindinput="changeColorVal" placeholder="支持十六进制,rgb,rgba,或英文色值"></input>
+            <view class="btn btn-primary" bindtap="changeBgColor"> 更换 </view>
+        </view>
+        <view class="key">
+          色值乱输就是白色(百度色值),不建议用深色! 
+        </view>
+        <view class="key">十六进制示例: #4AEE91 , #76ECEE , #817BEE , #EEA8DA ...</view>
+        <view class="key">rgb色值: rgb(74,238,145) rgb(238,168,218) ... 等等  </view>
+        <view class="key">rgba色值: 就是在rgb色值后面添加了一个透明度(0-1), 如: rgba(0,0,0,0.8);</view>
+        <view class="key">英文值:  white, black,pink,purple,blue,yellow,skyblue ...等</view>
+        <view class="key">不了解的就百度(可以把示例值放入试试-_-!) 离开此页面会恢复为初始数据,不会保存状态哟!</view>
+    </view>
+    <view class="modal_mask {{!visible?'modal_mask_hide':''}}">
+      <view class="modal">
+        <view class="modal_title">定时提醒:</view>
+        <view class="modal_body">
+          <view class="remind" wx:if="{{settings.type !== 0}}">
+            <text>提醒次数: {{remind}}次</text>
+            <text>总共时长:{{amountTime}}</text>
+          </view>
+          <view class="remind" wx:else>
+            时间到啦
+          </view>
+        </view>
+        <view class="modal_foot">
+          <view class="btn btn-success" bindtap="closeModal">确认</view>
+          <view class="btn btn-warning" bindtap="onPauseMusic">{{pauseMusic?"继续":"暂停"}}</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:40px;"></view>
+    <view class="control">
+        <view class="btn btn-success" bindtap="countStart">{{state === 0?"开始":state === 1?"继续":"暂停"}}</view>
+        <view class="btn btn-warning" bindtap="countReload">重置</view>
+        <view class="btn btn-error" bindtap="countCancel">取消</view>
+    </view>
+</view>

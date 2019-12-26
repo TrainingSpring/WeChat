@@ -1,0 +1,21 @@
+<!--engineerPages/result/index.wxml-->
+<view class='result'>
+  <view class='textarea'>
+    <textarea value='{{info.cause}}' data-tkey="cause" bindinput='inputChange' placeholder='请填写故障原因'></textarea>
+  </view>
+  <view class='textarea'>
+    <textarea value='{{info.result}}' data-tkey="result" bindinput='inputChange' placeholder='请填写处理结果'></textarea>
+  </view>
+  <view class='details'>
+    <view class='title'>费用明细{{count}}</view>
+     <i-input i-class='inputBorder' bind:change="inputChange" tkey="repair" value="{{ info.repair }}" type="number" right title="维修费 :" placeholder="请输入金额" />
+     <i-input i-class='inputBorder' bind:change="inputChange"  tkey="part" value="{{ info.part }}" type="number" right title="零件费 :" placeholder="请输入金额" />
+     <i-input i-class='inputBorder' bind:change="inputChange"  tkey="train" value="{{ info.train }}" type="number" right title="培训费 :" placeholder="请输入金额" />
+     <i-input i-class='inputBorder' bind:change="inputChange"  tkey="upkeep" value="{{ info.upkeep }}" type="number" right title="维保费 :" placeholder="请输入金额" />
+     <i-input i-class='inputBorder' bind:change="inputChange"  tkey="count" value="{{ info.count }}" disabled type="number" right title="合计 :" placeholder="0" />
+  </view>
+  <view class='textarea'>
+    <textarea value='{{info.remark}}' data-tkey="remark"  bindinput='inputChange' placeholder='备注 :'></textarea>
+  </view>
+  <view class='submit'>结束处理</view>
+</view>

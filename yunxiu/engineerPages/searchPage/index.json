@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "listItem":"/Components/listItem/listItem/index",
+    "tabBar":"/Components/tabBar/index"
+  },
+  "navigationBarTitleText": "搜索"
+}

@@ -1,0 +1,21 @@
+/* Components/listItem/listItem-group/index.wxss */
+.listBox .list{
+    background: #fff;
+    padding: 10rpx;
+    color:#333;
+    font-size: 24rpx;
+}
+.listBox .list .status{
+    padding: 30rpx 20rpx;
+    border-bottom:1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.listBox .list .status .right{
+    color:#f53530;
+}
+.listBox .list .disposeInfo{
+    display: flex;
+    flex-direction: column;
+}

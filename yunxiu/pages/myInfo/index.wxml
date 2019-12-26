@@ -1,0 +1,20 @@
+<!--pages/myInfo/index.wxml-->
+<view class="infoBox">
+    <view class="infoItem">
+        <i-cell-group>    
+            <i-cell title="头像" is-link  avatar="{{true}}">
+                <i-avatar slot="avatar" src="http://img.52z.com/upload/news/image/20180212/20180212084623_32086.jpg" ></i-avatar>
+            </i-cell>
+            <i-cell title="会员名" is-link  value="{{userinfo.username}}"></i-cell>
+            <i-cell title="昵称" is-link  value="{{userinfo.nick}}"></i-cell>
+            <i-cell title="手机号" is-link  value="{{userinfo.phoneNumber}}"></i-cell>
+        </i-cell-group>
+        <i-cell-group i-class="other">    
+            <i-cell title="邮箱" is-link  value="{{userinfo.email}}"></i-cell>
+            <i-cell title="真实姓名" is-link  value="{{userinfo.realName}}"></i-cell>
+            <i-cell title="身份证号" is-link  value="{{userinfo.idCard}}"></i-cell>
+            <i-cell title="详细地址" is-link ></i-cell>
+        </i-cell-group>
+    </view>
+
+</view>

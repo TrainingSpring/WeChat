@@ -1,0 +1,112 @@
+/* engineerPages/getOrder/index.wxss */
+.self-tabs{
+    background:#f5f5f5;
+}
+.content{
+    padding :40px  0 20rpx;
+}
+.content .order{
+    background: #fff;
+    padding: 0 20rpx;
+}
+.self-list{
+    border-bottom: 1px solid #ccc;
+}
+.content .order .self-list .value{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+.content .order .self-list .value .img{
+    width:200rpx;
+    height:200rpx;
+    background: #ccc;
+}
+.content .order .self-list .value .img.fixedMask{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content .order .self-list .value .img.fixedMask image{
+  height: auto;
+  width: 100%;
+}
+
+.content.commBox{
+    min-height: calc(100vh - 40px - 20rpx);
+    padding-bottom: 0!important;
+}
+.content .record .recordItem{
+    background: #fff;
+    margin-bottom: 20rpx;
+    padding: 20rpx 0 0;
+}
+.content .record .recordItem .self-record-list{
+    padding: 20rpx;
+}
+.content .machineInfo .img{
+    height: 235rpx;
+    width: 655rpx;
+}
+.content .machineInfo .head{
+    padding: 0 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 50rpx 0;
+    margin-bottom: 20rpx;
+}
+.content .machineInfo .head .title{
+    margin-top: 50rpx;
+    font-size: 24rpx;
+}
+.content .machineDetail{
+    
+    background: #fff;
+}
+.content .machineDetail .tabBox{
+    display: flex;
+    flex-direction: row;
+}
+.content .machineDetail .basic{
+    padding: 20rpx;
+}
+.content .machineDetail t-table{
+    color: #7d7d7d;
+}
+.content .machineDetail .key{
+    flex:2;
+}
+
+.content .machineDetail .value{
+    flex: 5;
+}
+.content .machineDetail  .self-td-value{
+    border-right: none !important;
+}
+.content .machineDetail .self-tr-bottom{
+    border-bottom: none !important;
+}
+.content .machineDetail .buy{
+    padding: 20rpx;
+}
+.content .machineDetail .register{
+    padding: 20rpx;
+}
+
+
+
+.machineDetail t-tab{
+    flex: 1;
+}

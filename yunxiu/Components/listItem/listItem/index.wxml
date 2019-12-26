@@ -1,0 +1,4 @@
+<!--Components/listItem/listItem/index.wxml-->
+<!-- 列表通用组件  内层 -->
+<view class="info i-class"><view>{{key}}:</view><text style="{{valueColor?'color:'+valueColor:''}}">{{value}}</text></view>
+           

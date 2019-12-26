@@ -1,0 +1,23 @@
+<!--pages/evalute/index.wxml-->
+<!-- 评价 -->
+<space></space>
+<view class="evalute">
+    <view class="handleStatus">维修已完成</view>
+    <view class="eval">请对本次服务作出评价</view>
+    <view class="rate">
+        <i-rate 
+            size="26"
+            bind:change="changeStar" 
+            value="{{starIndex}}">
+    </i-rate>
+    </view>
+    <view class="other">
+        <textarea placeholder="写其他意见和建议" bindinput="changeText">
+
+        </textarea>
+    </view>
+    <view class="submit" bindtap="submit">
+        匿名提交
+    </view>
+
+</view>

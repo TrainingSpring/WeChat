@@ -1,0 +1,67 @@
+@import "/app.wxss";
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size:18rpx;
+  height: 100rpx;
+  color:#b3b3b3;
+  background: white;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top:1px solid #b3b3b3;
+}
+.tab-bar-item.tab-bar-active{
+  color:#008cff;
+}
+.tab-item-box{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex: 1;
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*扫码背景*/
+.tab-bar-item .tab-main-bg{
+  width:100rpx;
+  height: 50rpx;
+  position: absolute;
+  top: -60rpx;
+  padding: 10rpx;
+  background: #fff;
+  border-radius: 60rpx 60rpx 0 0 ;
+  border-top: #b3b3b3 1px solid;
+  z-index:0;
+}
+/**
+*扫码
+*/
+.tab-bar-icon.tab-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width:80rpx;
+  height:80rpx;
+  position: absolute;
+  z-index: 9;
+  font-size: 64rpx;
+  top: -40rpx;
+  border-radius:50%;
+  color:white !important;
+  text-align: center;
+  align-items: center;
+  background: #1e89e0;
+}
+/**tabBar占位*/
+.tab-bar-space{
+  height: 150rpx;
+}

@@ -1,0 +1,32 @@
+<!--pages/search/index.wxml-->
+<!-- 进度查询  query -->
+<view class="query">
+    <space></space>
+    <view class="padding"></view>
+    <steps direction="vertical">
+        <step icon="\a" status="finish">
+            <view slot="title">
+                  11:00AM
+            </view>
+            <view slot="content">
+                申请已提交...
+            </view>
+        </step>
+        <step icon="\a"  status="finish">
+            <view slot="title">
+                  11:00AM
+            </view>
+            <view slot="content">
+                申请已提交...
+            </view>
+        </step>
+        <step icon="\a"  status="wait">
+            <view slot="title">
+                  11:00AM
+            </view>
+            <view slot="content">
+                申请已提交...
+            </view>
+        </step>
+    </steps>
+</view>

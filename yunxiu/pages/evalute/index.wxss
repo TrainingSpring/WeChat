@@ -1,0 +1,45 @@
+/* pages/evalute/index.wxss */
+.evalute{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.evalute .handleStatus{
+    margin-top: 50rpx;
+    color: #666;
+    font-size: 30rpx;
+}
+.evalute .eval{
+    font-size: 26rpx;
+    color: #999;
+    padding: 20rpx 0;
+    border-bottom: 1px #999 dashed;
+}
+.evalute .rate{
+    margin-top: 30rpx;
+}
+.evalute .other{
+    padding: 20rpx;
+    margin-top: 60rpx;
+}
+
+.evalute .other textarea{
+    border: 1px solid #eee;
+    height: 290rpx;
+    font-size: 26rpx;
+    color: #666;
+    padding: 20rpx;
+}
+.evalute .submit{
+    width: 640rpx;
+    height: 95rpx;
+    background: #4a4c59;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 95rpx;
+    border-radius: 10rpx;
+    position: fixed;
+    bottom: 20rpx;
+}

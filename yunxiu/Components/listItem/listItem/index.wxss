@@ -1,0 +1,11 @@
+/* Components/listItem/listItem/index.wxss */
+.info{
+    padding:25rpx 20rpx;
+    display: flex;
+}
+.info view{
+    flex: 1;
+}
+.info text{
+    flex: 4;
+}

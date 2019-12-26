@@ -1,0 +1,8 @@
+<!--pages/safety/index.wxml-->
+<!-- 安全中心 safety : 安全 -->
+<view class="safetyBox commBox">
+     <i-cell-group i-class="other">    
+            <i-cell title="修改密码" is-link ></i-cell>
+            <i-cell title="修改绑定手机号" is-link  value="{{phoneNumber}}"></i-cell>
+        </i-cell-group>
+</view>

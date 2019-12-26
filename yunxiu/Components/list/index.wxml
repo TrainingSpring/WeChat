@@ -1,0 +1,16 @@
+<!--Components/list/index.wxml-->
+<!-- 
+    列表组件
+    @params: 
+        row 是否flex 横向布局
+        size: 字体大小
+        key:属性名
+        value:属性值
+ -->
+<view class="list i-class" style="flex-direction: {{row?'row':'column'}};font-size:{{size}}rpx;">
+    <view class="list-key">{{key}}</view>
+    <view class="list-value">{{value}}</view>
+    <view class="list-slot" wx:if="{{!row}}">
+        <slot></slot>
+    </view>
+</view>

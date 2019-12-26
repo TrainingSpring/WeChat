@@ -1,0 +1,6 @@
+/* Components/table/table/index.wxss */
+.t-table{
+    border:1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}

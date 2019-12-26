@@ -1,0 +1,4 @@
+<!--pages/articleDetails/index.wxml-->
+<commdetails title="这里是标题" date="云绣网  2019-04-24  08:38:25">
+    <rich-text nodes="{{html}}"></rich-text>
+</commdetails>

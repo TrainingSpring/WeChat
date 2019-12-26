@@ -1,0 +1,26 @@
+/* engineerPages/accepted/index.wxss */
+.acceptBox{
+    min-height: calc(100vh - 40px);
+}
+.acceptBox .detail-tabs{
+    background: #f5f5f5;
+}
+
+.commBox{
+    padding-top: 40px;
+}
+.acceptBox t-tab{
+    flex: 1;
+}
+.acceptBox .content{
+    padding-bottom: 50px;
+}
+.acceptBox .content .orderItem .orderLi{
+    padding: 15rpx 20rpx !important;
+}
+.acceptBox .orderItem{
+    font-size: 24rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+    padding-bottom: 20rpx;
+}

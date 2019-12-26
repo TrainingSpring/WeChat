@@ -1,0 +1,30 @@
+/* pages/myOrder/index.wxss */
+.content{
+    min-height: calc(100vh - 42px);
+    background: #f5f5f5;
+}
+.tabs{
+    height: 42px;
+}
+.order{
+    margin-bottom:20rpx;
+}
+.handle{
+    border-top: 1px solid #eee;
+    padding: 25rpx 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.handle .btn{
+    padding: 10rpx 40rpx;
+    border-radius: 30rpx;
+    font-size: 25rpx;
+    border: 1px solid #d3d3d3;
+    color: #666;
+    margin-left: 20rpx;
+}
+.handle .mainBtn{
+    border: 1px solid #ff1516 !important;
+    color: #ff1516;
+}

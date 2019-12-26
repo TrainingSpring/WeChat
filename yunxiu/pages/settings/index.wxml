@@ -1,0 +1,11 @@
+<!--pages/settings/index.wxml-->
+<!-- 设置 -->
+<view class="commBox">
+     <i-cell-group i-class="other">    
+            <i-cell title="关于云服" is-link ></i-cell>
+            <i-cell title="用户隐私策略" is-link ></i-cell>
+            <i-cell title="意见反馈" is-link ></i-cell>
+            <view class="settings-exit">退出当前账号</view>
+        </i-cell-group>
+</view>
+

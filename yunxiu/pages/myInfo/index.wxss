@@ -1,0 +1,9 @@
+/* pages/myInfo/index.wxss */
+.infoBox{
+    background: #f5f5f5;
+    min-height: calc(100vh - 20rpx);
+    padding: 20rpx 0 0 0;
+}
+.infoBox .other{
+    margin-top: 20rpx;
+}

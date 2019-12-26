@@ -1,0 +1,35 @@
+.t-tabs-tab{
+    font-size: 24rpx;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.t-tabs-tab .t-tab-active{
+    color:#028bff;
+}
+.t-tabs-tab .t-tab-title{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+.t-tabs-tab .t-tab-title .tab-border{
+    background: #ccc;
+    position: absolute;
+}
+.t-tab-title .tab-border-right{
+    height: 24rpx;
+    width: 1px;
+    right: 0px;
+}
+.t-tab-title .tab-border-bottom{
+    width: 80%;
+    height: 1px;
+    bottom: 0px;
+}
+.t-tab-title .tab-border.tab-border-bottom-active{
+    background: #028bff !important;
+}
+

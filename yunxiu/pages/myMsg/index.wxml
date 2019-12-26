@@ -1,0 +1,12 @@
+<!--pages/myMsg/index.wxml-->
+<!-- 我的消息 -->
+<view class="myMsgBox">
+    <view class="msgItem">
+        <i-cell-group>
+            <i-cell title="站内消息" is-link url="../repair/index"></i-cell>
+            <i-cell title="未读消息" is-link url="../record/index"></i-cell>
+            <i-cell title="推送消息" is-link url="../query/index"></i-cell>
+            <i-cell title="发送消息" is-link url="../query/index"></i-cell>
+        </i-cell-group>
+    </view>
+</view>

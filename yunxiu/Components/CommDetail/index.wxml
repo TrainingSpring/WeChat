@@ -1,0 +1,10 @@
+<!--Components/CommTitle/index.wxml-->
+<space></space>
+<view class="details">
+    <view class="title">{{title}}</view>
+    <view class="date"><text space="nbsp">{{date}}</text></view>
+    <view class="content">
+       <slot></slot>
+        
+    </view>
+</view>

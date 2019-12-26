@@ -1,0 +1,11 @@
+<!--Components/404/index.wxml-->
+<view class='notfound'>
+  <view class='img'>
+    <image src='{{img}}'></image>
+  </view>
+  <view class='text'>
+    <text>
+      {{text}}
+    </text>
+  </view>
+</view>

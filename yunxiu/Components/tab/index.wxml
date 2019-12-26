@@ -1,0 +1,21 @@
+
+<!-- 
+    @Author:Training
+    @desc:该组件是tabs的子元素  用于渲染页面中的tab
+    @warning : 这里需要注意  若要使用border   
+               请在引入本组件时 给本组件直接定义给定一个flex:1
+               否则将会引起样式变形
+               如: 引入后起名为 t-tab
+                <t-tab style="flex:1"></t-tab>
+    @params
+        title: 显示标题
+        key: 标识
+        border: 边框显示的位置 bottom   right  设置为其他值则为无边框
+ -->
+
+<view class="t-tabs-tab" bindtap="handleClickItem">
+    <view class="t-tab-title {{current? 't-tab-active' :''}}" >
+        <text> {{title}} </text>
+        <view class="tab-border tab-border-{{border}} {{(border == 'bottom' && current)?'tab-border-bottom-active':'' }}"></view>
+    </view>
+</view>

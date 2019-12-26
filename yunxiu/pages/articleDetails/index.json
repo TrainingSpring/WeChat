@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "commdetails":"/Components/CommDetail/index"
+  },
+  "navigationBarTitleText": "详情"
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "space":"/Components/spaceRow/index"
+  },
+  "navigationBarTitleText": "说明书"
+}

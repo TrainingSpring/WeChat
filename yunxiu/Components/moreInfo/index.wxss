@@ -1,0 +1,26 @@
+/* Components/moreInfo/index.wxss */
+.moreInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.infoContent{
+    height: 0;
+    width:100%;
+    visibility: hidden;
+}
+.isMore{
+    height: auto;
+    visibility: initial !important;
+}
+.button{
+    font-size: 18rpx;
+    color: #c6c6c6;
+    border: 1px solid #c6c6c6;
+    padding:12rpx 20rpx;
+    border-radius:19px;
+}
+i-icon{
+    margin-left: 10rpx;
+}

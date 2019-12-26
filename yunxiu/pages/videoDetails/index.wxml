@@ -1,0 +1,5 @@
+<!--pages/videoDetails/index.wxml-->
+<!-- 视频详情 -->
+<commDetail title="{{title}}" date="{{date}}">
+    <video class="video-detail" title="{{title}}" src="{{video}}" poster="{{poster}}" />
+</commDetail>

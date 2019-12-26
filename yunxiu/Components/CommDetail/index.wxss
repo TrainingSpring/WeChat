@@ -1,0 +1,18 @@
+.details{
+    padding: 0 20rpx;
+}
+.details .title{
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-top: 22rpx;
+    margin-left: 18rpx;
+}
+.details .date{
+    color:#989898;
+    font-size: 22rpx;
+    margin-left: 18rpx;
+}
+.details .content{
+    margin-top: 55rpx;
+    font-size: 22rpx;
+}

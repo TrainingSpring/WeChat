@@ -1,0 +1,14 @@
+/* Components/list/index.wxss */
+.list{
+    display: flex;
+    padding: 42rpx 20rpx;
+}
+.list .list-key{
+    flex: 1;
+    margin-left: 10rpx;
+    color:#999;
+}
+.list .list-value{
+    flex: 2;
+    color:#333;
+}

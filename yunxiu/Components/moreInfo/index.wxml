@@ -1,0 +1,9 @@
+<!--Components/moreInfo/index.wxml-->
+<view class="moreInfo">
+    <view class="infoContent {{isMore?'isMore':''}}" animation="{{animation}}">
+        <slot></slot>
+    </view>
+    <view class="button" bindtap="infoMore">
+        展开查看完整信息<i-icon type="{{isMore?'packup':'unfold'}}" size="12" color="#454545"></i-icon>
+    </view>
+</view>

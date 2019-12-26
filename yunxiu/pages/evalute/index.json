@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "space":"/Components/spaceRow/index",
+    "i-rate":"/dist/rate/index"
+  }
+}

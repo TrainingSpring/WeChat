@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "commDetail":"/Components/CommDetail/index"
+  }
+}

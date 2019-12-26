@@ -1,0 +1,43 @@
+{
+    "Components":{
+        "name":"自定义组件",
+        "404":{
+            "name":"该页为空时调用此组件",
+            "params":{
+                "img":"错误显示图片",
+                "text":"显示文字提示"
+            }
+        },
+        "commDetail":{
+            "name":"公用的详情组件",
+            "params":{
+                "title":"详情页的标题",
+                "date":"此详情的修改/发布时间"
+            },
+            "slot":"详情页内容  可以是文本,视频等..."
+        },
+        "listItem":{
+            "name":"列表条款",
+            "child":{
+                "listItem":{
+                    "name":"列表项目子元素",
+                    "params":{
+                        "key":"要显示的属性名",
+                        "value":"要显示的值"
+                    }
+                },
+                "listItem-group":{
+                    "name":"列表项目父元素",
+                    "params":{
+                        "key":"标题属性名",
+                        "value":"标题值",
+                        "status":"该列表对应状态名"
+                    }
+                }
+            }
+        }
+    },
+    "dist":"其他第三方组件",
+    "images":"图片文件",
+    "pages":"页面文件"
+}

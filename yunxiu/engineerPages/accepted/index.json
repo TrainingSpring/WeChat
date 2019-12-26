@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "t-tabs": "/Components/tabs/index",
+    "t-tab": "/Components/tab/index",
+    "listItem":"/Components/listItem/listItem/index",
+    "listItem-group":"/Components/listItem/listItem-group/index",
+    "tabBar":"/Components/tabBar/index",
+    "i-rate":"/dist/rate/index"
+  },
+  "navigationBarTitleText": "已接订单"
+}
